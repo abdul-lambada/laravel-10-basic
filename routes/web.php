@@ -31,7 +31,7 @@ Route::get('halo', function () {
 Route::get('dosen', [App\Http\Controllers\DosenController::class, 'index']);
 
 //Route Pegawai dengan Index
-Route::get('/pegawai/{nama}', [\App\Http\Controllers\PegawaiController::class, 'index']);
+// Route::get('/pegawai/{nama}', [\App\Http\Controllers\PegawaiController::class, 'index']);
 
 //Route baru dengan get dan post
 Route::get('/formulir', [\App\Http\Controllers\PegawaiController::class, 'formulir']);
@@ -41,3 +41,11 @@ Route::post('/formulir/proses', [\App\Http\Controllers\PegawaiController::class,
 Route::get('/blog', [App\Http\Controllers\BlogController::class, 'home']);
 Route::get('/blog/tentang', [App\Http\Controllers\BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [App\Http\Controllers\BlogController::class, 'kontak']);
+
+//Route CRUD
+Route::get('/pegawai', [App\Http\Controllers\PegawaiController::class, 'index']);
+Route::get('/pegawai/tambah', [App\Http\Controllers\PegawaiController::class, 'tambah']);
+Route::post('/pegawai/store', [App\Http\Controllers\PegawaiController::class, 'store']);
+Route::get('/pegawai/edit/{id}', [App\Http\Controllers\PegawaiController::class, 'edit']);
+Route::post('/pegawai/update', [App\Http\Controllers\PegawaiController::class, 'update']);
+Route::get('/pegawai/hapus/{id}', [App\Http\Controllers\PegawaiController::class, 'hapus']);
