@@ -44,6 +44,7 @@ Route::get('/blog/kontak', [App\Http\Controllers\BlogController::class, 'kontak'
 
 //Route CRUD
 Route::get('/pegawai', [App\Http\Controllers\PegawaiController::class, 'index']);
+Route::get('/pegawai/cari', [App\Http\Controllers\PegawaiController::class, 'cari']);
 Route::get('/pegawai/tambah', [App\Http\Controllers\PegawaiController::class, 'tambah']);
 Route::post('/pegawai/store', [App\Http\Controllers\PegawaiController::class, 'store']);
 Route::get('/pegawai/edit/{id}', [App\Http\Controllers\PegawaiController::class, 'edit']);

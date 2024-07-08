@@ -27,6 +27,14 @@
     <br>
     <br>
 
+    <p>Cari Data Pegawai:</p>
+    <form action="/pegawai/cari" method="GET">
+        <input type="text" name="cari" placeholder="Cari Pegawai.." value="{{ old('cari')}}">
+        <input type="submit" value="Cari">
+    </form>
+
+    <br>
+
     <table border="1">
         <tr>
             <th>Nama</th>
@@ -51,6 +59,7 @@
         @endforeach
     </table>
 
+    {{--  Menambahkan currentPage/pagination untuk memindahkan halaman  --}}
     <br>
     Halaman : {{$pegawai->currentPage()}} <br>
     Jumlah Data : {{$pegawai->total()}} <br>
