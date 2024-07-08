@@ -50,3 +50,7 @@ Route::post('/pegawai/store', [App\Http\Controllers\PegawaiController::class, 's
 Route::get('/pegawai/edit/{id}', [App\Http\Controllers\PegawaiController::class, 'edit']);
 Route::post('/pegawai/update', [App\Http\Controllers\PegawaiController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [App\Http\Controllers\PegawaiController::class, 'hapus']);
+
+//Route Validation
+Route::get('/input', [\App\Http\Controllers\BuruhController::class, 'input']);
+Route::post('/proses', [\App\Http\Controllers\BuruhController::class, 'proses']);
