@@ -54,3 +54,7 @@ Route::get('/pegawai/hapus/{id}', [App\Http\Controllers\PegawaiController::class
 //Route Validation
 Route::get('/input', [\App\Http\Controllers\BuruhController::class, 'input']);
 Route::post('/proses', [\App\Http\Controllers\BuruhController::class, 'proses']);
+
+
+//Route Karyawan
+Route::get('/karyawan', [App\Http\Controllers\KaryawanController::class, 'index']);
