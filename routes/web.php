@@ -23,9 +23,9 @@ Route::get('halo', function () {
 });
 
 // Route get dengan view
-Route::get('blog', function() {
-    return view('blog');
-});
+// Route::get('blog', function() {
+//     return view('blog');
+// });
 
 //Route dengan controller
 Route::get('dosen', [App\Http\Controllers\DosenController::class, 'index']);
@@ -36,3 +36,8 @@ Route::get('/pegawai/{nama}', [\App\Http\Controllers\PegawaiController::class, '
 //Route baru dengan get dan post
 Route::get('/formulir', [\App\Http\Controllers\PegawaiController::class, 'formulir']);
 Route::post('/formulir/proses', [\App\Http\Controllers\PegawaiController::class, 'proses']);
+
+//Route Blog
+Route::get('/blog', [App\Http\Controllers\BlogController::class, 'home']);
+Route::get('/blog/tentang', [App\Http\Controllers\BlogController::class, 'tentang']);
+Route::get('/blog/kontak', [App\Http\Controllers\BlogController::class, 'kontak']);
