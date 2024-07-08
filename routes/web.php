@@ -29,3 +29,10 @@ Route::get('blog', function() {
 
 //Route dengan controller
 Route::get('dosen', [App\Http\Controllers\DosenController::class, 'index']);
+
+//Route Pegawai dengan Index
+Route::get('/pegawai/{nama}', [\App\Http\Controllers\PegawaiController::class, 'index']);
+
+//Route baru dengan get dan post
+Route::get('/formulir', [\App\Http\Controllers\PegawaiController::class, 'formulir']);
+Route::post('/formulir/proses', [\App\Http\Controllers\PegawaiController::class, 'proses']);
