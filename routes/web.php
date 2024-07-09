@@ -1,5 +1,6 @@
 <?php
 
+// use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,3 +67,12 @@ Route::post('/staff/store', [App\Http\Controllers\StaffController::class, 'store
 Route::get('/staff/edit/{id}', [App\Http\Controllers\StaffController::class, 'edit']);
 Route::put('/staff/update/{id}', [App\Http\Controllers\StaffController::class, 'update']);
 Route::get('/staff/hapus/{id}', [App\Http\Controllers\StaffController::class, 'hapus']);
+
+//Route Guru
+Route::get('/guru', [App\Http\Controllers\GuruController::class, 'index']);
+Route::get('/guru/hapus/{id}', [App\Http\Controllers\GuruController::class, 'hapus']);
+Route::get('/guru/trash', [App\Http\Controllers\GuruController::class, 'trash']);
+Route::get('/guru/kembalikan/{id}', [App\Http\Controllers\GuruController::class, 'kembalikan']);
+Route::get('/guru/kembalikan_semua', [App\Http\Controllers\GuruController::class, 'kembalikan_semua']);
+Route::get('/guru/hapus_permanen/{id}', [App\Http\Controllers\GuruController::class, 'hapus_permanen']);
+Route::get('/guru/hapus_permanen_semua', [App\Http\Controllers\GuruController::class, 'hapus_permanen_semua']);
