@@ -76,3 +76,6 @@ Route::get('/guru/kembalikan/{id}', [App\Http\Controllers\GuruController::class,
 Route::get('/guru/kembalikan_semua', [App\Http\Controllers\GuruController::class, 'kembalikan_semua']);
 Route::get('/guru/hapus_permanen/{id}', [App\Http\Controllers\GuruController::class, 'hapus_permanen']);
 Route::get('/guru/hapus_permanen_semua', [App\Http\Controllers\GuruController::class, 'hapus_permanen_semua']);
+
+//Route Relaso One to One
+Route::get('/pengguna', [App\Http\Controllers\PenggunaController::class, 'index']);
