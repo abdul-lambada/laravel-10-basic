@@ -31,7 +31,7 @@ class KaryawanController extends Controller
         $karyawan = Karyawan::where('nama', 'like', '%a%')->get();
 
         //membuat pagination dengan menampilkan 10 data perhalaman
-        $karyawan = Karyawan::paginate(10)
+        $karyawan = Karyawan::paginate(10);
 
         //mengirim data karyawan ke view karyawan
         return view('karyawan', ['karyawan' => $karyawan]);

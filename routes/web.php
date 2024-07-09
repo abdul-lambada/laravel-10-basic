@@ -58,3 +58,11 @@ Route::post('/proses', [\App\Http\Controllers\BuruhController::class, 'proses'])
 
 //Route Karyawan
 Route::get('/karyawan', [App\Http\Controllers\KaryawanController::class, 'index']);
+
+//Route CRUD Eloquent
+Route::get('/staff', [App\Http\Controllers\StaffController::class, 'index']);
+Route::get('/staff/tambah', [App\Http\Controllers\StaffController::class, 'tambah']);
+Route::post('/staff/store', [App\Http\Controllers\StaffController::class, 'store']);
+Route::get('/staff/edit/{id}', [App\Http\Controllers\StaffController::class, 'edit']);
+Route::put('/staff/update/{id}', [App\Http\Controllers\StaffController::class, 'update']);
+Route::get('/staff/hapus/{id}', [App\Http\Controllers\StaffController::class, 'hapus']);
